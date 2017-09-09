@@ -1,6 +1,6 @@
 FROM node:8.4-stretch
 
-#ORIGINAL MAINTAINER Marco Raddatz
+ORIGINAL MAINTAINER Marco Raddatz
 MAINTAINER Jamitupya
 
 # Set environment variables
