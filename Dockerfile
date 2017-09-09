@@ -32,4 +32,4 @@ ADD image/run.sh /share/homebridge/run/run.sh
 
 # Run container
 EXPOSE 5353 51826
-CMD ["/share/homebridge/run/run.sh"]
+CMD ["/tmp/run/run.sh"]
