@@ -1,7 +1,6 @@
 FROM node:8.4-stretch
 
-ORIGINAL MAINTAINER Marco Raddatz
-MAINTAINER Jamitupya
+MAINTAINER Marco Raddatz
 
 # Set environment variables
 ENV DEBIAN_FRONTEND noninteractive
@@ -28,8 +27,8 @@ COPY avahi-daemon.conf /etc/avahi/avahi-daemon.conf
 USER root
 RUN mkdir -p /var/run/dbus
 
-ADD image/run.sh /tmp/run/run.sh
+ADD image/run.sh /root/run.sh
 
 # Run container
 EXPOSE 5353 51826
-CMD ["/tmp/run/run.sh"]
+CMD ["/root/run.sh"]
