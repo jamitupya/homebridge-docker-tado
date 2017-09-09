@@ -1,6 +1,7 @@
 FROM node:8.4-stretch
 
-MAINTAINER Marco Raddatz
+ORIGINAL MAINTAINER Marco Raddatz
+MAINTAINER Jamitupya
 
 # Set environment variables
 ENV DEBIAN_FRONTEND noninteractive
@@ -19,6 +20,7 @@ RUN apt-get update; \
 # You can force a specific version by setting HOMEBRIDGE_VERSION
 # See https://github.com/marcoraddatz/homebridge-docker#homebridge_version
 RUN npm install -g homebridge --unsafe-perm
+RUN npm install -g homebridge-tado-ac --unsafe-perm
 
 # Final settings
 COPY avahi-daemon.conf /etc/avahi/avahi-daemon.conf
