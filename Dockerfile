@@ -28,7 +28,7 @@ COPY avahi-daemon.conf /etc/avahi/avahi-daemon.conf
 USER root
 RUN mkdir -p /var/run/dbus
 
-ADD image/run.sh /share/homebridge/run/run.sh
+ADD image/run.sh /tmp/run/run.sh
 
 # Run container
 EXPOSE 5353 51826
